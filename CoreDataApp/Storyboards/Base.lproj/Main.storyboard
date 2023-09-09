@@ -42,6 +42,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Pi-Uv-Toz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -62,7 +65,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="nI2-Ju-UNK" kind="show" identifier="detailViewControllerSegue" id="fHh-vc-f11"/>
+                        <outlet property="loginTextField" destination="MVk-kz-i4K" id="9n7-R9-ZHc"/>
+                        <outlet property="passwordTextField" destination="Cbz-Ln-mF7" id="JZJ-Xv-Rzp"/>
+                        <segue destination="nI2-Ju-UNK" kind="presentation" identifier="detailViewControllerSegue" modalPresentationStyle="fullScreen" id="fHh-vc-f11"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -120,6 +125,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Save">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonPressed" destination="jWL-cS-Jk1" eventType="touchUpInside" id="P62-Uu-zHN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-X6-UvK">
                                 <rect key="frame" x="136.66666666666666" y="552.33333333333337" width="119.99999999999997" height="46.333333333333371"/>
@@ -133,6 +141,9 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="cancelButtonPressed" destination="jWL-cS-Jk1" eventType="touchUpInside" id="EPz-bA-xlS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H3U-3b-8mE"/>
@@ -149,6 +160,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cDa-GU-8zI"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="QcN-6U-q8H" id="rhG-HE-e2z"/>
+                        <outlet property="passwordConfirmationTextField" destination="lNN-MY-jlG" id="gvn-2o-Xdi"/>
+                        <outlet property="passwordTextField" destination="Ofm-Fd-6au" id="vbz-Vg-4L7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDK-dE-Ga1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-x5-hsq">
-                                <rect key="frame" x="121.66666666666669" y="253" width="150" height="21"/>
+                                <rect key="frame" x="121.66666666666669" y="150" width="150" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="uG9-wI-evB"/>
                                 </constraints>
@@ -172,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-jd-T2V">
-                                <rect key="frame" x="136.66666666666666" y="424" width="119.99999999999997" height="46.333333333333314"/>
+                                <rect key="frame" x="136.66666666666666" y="321" width="119.99999999999997" height="46.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Hew-NH-gc3"/>
                                 </constraints>
@@ -194,6 +210,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Sy-ph-Ev5"/>
+                    <connections>
+                        <outlet property="infoTextLabel" destination="tCo-x5-hsq" id="ATV-7t-0Fn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioS-yo-rGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
