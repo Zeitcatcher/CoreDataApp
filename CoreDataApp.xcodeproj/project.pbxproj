@@ -58,16 +58,56 @@
 		D93B5A0A2AAC137600048DED /* CoreDataApp */ = {
 			isa = PBXGroup;
 			children = (
-				D93B5A0B2AAC137600048DED /* AppDelegate.swift */,
-				D93B5A0D2AAC137600048DED /* SceneDelegate.swift */,
-				D93B5A0F2AAC137600048DED /* ViewController.swift */,
-				D93B5A112AAC137600048DED /* Main.storyboard */,
-				D93B5A172AAC137700048DED /* Assets.xcassets */,
-				D93B5A192AAC137700048DED /* LaunchScreen.storyboard */,
-				D93B5A1C2AAC137700048DED /* Info.plist */,
-				D93B5A142AAC137600048DED /* CoreDataApp.xcdatamodeld */,
+				D93B5A222AAC139900048DED /* App */,
+				D93B5A232AAC139F00048DED /* ViewControllers */,
+				D93B5A242AAC13AC00048DED /* Storyboards */,
+				D93B5A252AAC13B300048DED /* Resources */,
+				D93B5A262AAC13D700048DED /* Services */,
 			);
 			path = CoreDataApp;
+			sourceTree = "<group>";
+		};
+		D93B5A222AAC139900048DED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D93B5A0B2AAC137600048DED /* AppDelegate.swift */,
+				D93B5A0D2AAC137600048DED /* SceneDelegate.swift */,
+				D93B5A1C2AAC137700048DED /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D93B5A232AAC139F00048DED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D93B5A0F2AAC137600048DED /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D93B5A242AAC13AC00048DED /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D93B5A112AAC137600048DED /* Main.storyboard */,
+				D93B5A192AAC137700048DED /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D93B5A252AAC13B300048DED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D93B5A172AAC137700048DED /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D93B5A262AAC13D700048DED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D93B5A142AAC137600048DED /* CoreDataApp.xcdatamodeld */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NTDP5U69GA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoreDataApp/Info.plist;
+				INFOPLIST_FILE = CoreDataApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NTDP5U69GA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoreDataApp/Info.plist;
+				INFOPLIST_FILE = CoreDataApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
