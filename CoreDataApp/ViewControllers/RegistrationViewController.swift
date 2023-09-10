@@ -21,7 +21,14 @@ class RegistrationViewController: UIViewController {
     
     @IBAction func saveButtonPressed() {
         guard let login = loginTextField.text, let password = passwordTextField.text else { return }
-        saveData(login: login, and: password)
+        
+        fetchDataFromDB(login: login)
+        
+        if checkLoginIsUniqe() {
+            saveData(login: login, and: password)
+        } else {
+            print("data is not uniqe")
+        }
     }
     @IBAction func cancelButtonPressed() {
     }
@@ -30,8 +37,21 @@ class RegistrationViewController: UIViewController {
 //MARK: - Private Methods
 extension RegistrationViewController {
     private func saveData(login: String, and password: String) {
-        StorageManager.shared.create(login, password: password) { user in
-            users.append(user)
+        StorageManager.shared.create(login, password: password)
+    }
+    
+    private func fetchDataFromDB(login: String) {
+        StorageManager.shared.fetchData(login: login) { [weak self] result in
+            switch result {
+            case .success(let users):
+                self?.users = users
+            case .failure(let error):
+                print(error)
+            }
         }
+    }
+    
+    private func checkLoginIsUniqe() -> Bool {
+        users.isEmpty
     }
 }

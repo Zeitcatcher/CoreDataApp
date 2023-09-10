@@ -13,7 +13,7 @@ class StorageManager {
     
     // MARK: - Core Data stack
     private let persistantContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "User")
+        let container = NSPersistentContainer(name: "CoreDataApp")
         container.loadPersistentStores { _, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -29,11 +29,10 @@ class StorageManager {
     }
     
     // MARK: - CRUD
-    func create(_ login: String, password: String, complition: (User) -> Void) {
+    func create(_ login: String, password: String) {
         let user = User(context: viewContext)
         user.login = login
         user.password = password
-        complition(user)
         saveContext()
     }
     
@@ -46,6 +45,20 @@ class StorageManager {
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
+        }
+    }
+    
+    //MARK: - Core Data Fetch support
+    func fetchData(login: String, complition: (Result<[User], Error>) -> Void) {
+        let fetchRequest = User.fetchRequest()
+        do {
+            fetchRequest.predicate = NSPredicate(
+                format: "(login = %@)", login
+            )
+            let users = try viewContext.fetch(fetchRequest)
+            complition(.success(users))
+        } catch let error {
+            complition(.failure(error))
         }
     }
 }
