@@ -28,6 +28,7 @@ class RegistrationViewController: UIViewController {
             if passwordTextField.text == passwordConfirmationTextField.text {
                 saveData(login: login, and: password)
                 print("Data saved")
+                dismiss(animated: true)
             } else {
                 print("Passwords don't match")
             }
@@ -36,6 +37,7 @@ class RegistrationViewController: UIViewController {
         }
     }
     @IBAction func cancelButtonPressed() {
+        dismiss(animated: true)
     }
 }
 

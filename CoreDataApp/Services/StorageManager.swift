@@ -48,7 +48,7 @@ class StorageManager {
         }
     }
     
-    //MARK: - Core Data Fetch support
+    // MARK: - Core Data Fetch support
     func fetchData(login: String, complition: (Result<[User], Error>) -> Void) {
         let fetchRequest = User.fetchRequest()
         do {
@@ -60,5 +60,11 @@ class StorageManager {
         } catch let error {
             complition(.failure(error))
         }
+    }
+    
+    // MARK: - Core Data Delete support
+    func delete(_ user: User) {
+        viewContext.delete(user)
+        saveContext()
     }
 }

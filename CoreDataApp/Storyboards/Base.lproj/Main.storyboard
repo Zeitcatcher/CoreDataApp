@@ -178,8 +178,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-x5-hsq">
-                                <rect key="frame" x="121.66666666666669" y="150" width="150" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-x5-hsq">
+                                <rect key="frame" x="121.66666666666669" y="150" width="150" height="20.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="uG9-wI-evB"/>
                                 </constraints>
@@ -187,26 +187,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-jd-T2V">
-                                <rect key="frame" x="136.66666666666666" y="321" width="119.99999999999997" height="46.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-nF-bkr">
+                                <rect key="frame" x="97.000000000000014" y="320.33333333333331" width="199.33333333333337" height="116.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-jd-T2V">
+                                        <rect key="frame" x="0.0" y="0.0" width="199.33333333333334" height="46.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Close">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Cd0-aY-bXT" kind="unwind" unwindAction="unwindFor:" id="JhX-SW-rtp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K15-wJ-UBG">
+                                        <rect key="frame" x="0.0" y="70.333333333333371" width="199.33333333333334" height="46.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Delete account">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="deleteButtonPressed" destination="nI2-Ju-UNK" eventType="touchUpInside" id="GgM-Wl-aNB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Hew-NH-gc3"/>
+                                    <constraint firstItem="JeV-jd-T2V" firstAttribute="width" secondItem="K15-wJ-UBG" secondAttribute="width" id="qmE-lb-n8f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Close">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
-                                </buttonConfiguration>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V9r-zZ-UpJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JeV-jd-T2V" firstAttribute="top" secondItem="tCo-x5-hsq" secondAttribute="bottom" constant="150" id="6Wn-No-ytz"/>
+                            <constraint firstItem="SnB-nF-bkr" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="NN6-By-exk"/>
                             <constraint firstItem="tCo-x5-hsq" firstAttribute="top" secondItem="V9r-zZ-UpJ" secondAttribute="top" constant="150" id="Sk8-tX-35x"/>
-                            <constraint firstItem="tCo-x5-hsq" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="i7y-xS-3JK"/>
-                            <constraint firstItem="JeV-jd-T2V" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="lFC-wp-i1M"/>
+                            <constraint firstItem="SnB-nF-bkr" firstAttribute="top" secondItem="tCo-x5-hsq" secondAttribute="bottom" constant="150" id="Sse-bE-h1W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Sy-ph-Ev5"/>
@@ -215,6 +235,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioS-yo-rGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Cd0-aY-bXT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1855.7251908396945" y="736.61971830985919"/>
         </scene>

@@ -24,13 +24,24 @@ class LoginViewController: UIViewController {
         fetchDataFromDB(login: login)
 
         guard let user = users.first else {
-//            print("Something is wrong")
+            print("Something is wrong")
             return
         }
         
         if user.password == password {
-//            print("Horray")
+            print("Horray")
+            performSegue(withIdentifier: "detailViewControllerSegue", sender: nil)
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailsVC = segue.destination as? DetailsViewController else { return }
+        detailsVC.user = users.first
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        loginTextField.text = ""
+        passwordTextField.text = ""
     }
 }
 
