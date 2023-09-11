@@ -24,10 +24,15 @@ class RegistrationViewController: UIViewController {
         
         fetchDataFromDB(login: login)
         
-        if checkLoginIsUniqe() {
-            saveData(login: login, and: password)
+        if checkLoginIsUnique() {
+            if passwordTextField.text == passwordConfirmationTextField.text {
+                saveData(login: login, and: password)
+                print("Data saved")
+            } else {
+                print("Passwords don't match")
+            }
         } else {
-            print("data is not uniqe")
+            print("data is not unique")
         }
     }
     @IBAction func cancelButtonPressed() {
@@ -51,7 +56,7 @@ extension RegistrationViewController {
         }
     }
     
-    private func checkLoginIsUniqe() -> Bool {
+    private func checkLoginIsUnique() -> Bool {
         users.isEmpty
     }
 }
