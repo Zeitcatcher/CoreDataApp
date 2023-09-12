@@ -178,7 +178,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-x5-hsq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-x5-hsq">
                                 <rect key="frame" x="121.66666666666669" y="150" width="150" height="20.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="uG9-wI-evB"/>
@@ -224,6 +224,7 @@
                         <viewLayoutGuide key="safeArea" id="V9r-zZ-UpJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tCo-x5-hsq" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="KPA-nh-Wi1"/>
                             <constraint firstItem="SnB-nF-bkr" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="NN6-By-exk"/>
                             <constraint firstItem="tCo-x5-hsq" firstAttribute="top" secondItem="V9r-zZ-UpJ" secondAttribute="top" constant="150" id="Sk8-tX-35x"/>
                             <constraint firstItem="SnB-nF-bkr" firstAttribute="top" secondItem="tCo-x5-hsq" secondAttribute="bottom" constant="150" id="Sse-bE-h1W"/>
