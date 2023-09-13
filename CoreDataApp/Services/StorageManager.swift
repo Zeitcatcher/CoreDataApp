@@ -67,4 +67,9 @@ class StorageManager {
         viewContext.delete(user)
         saveContext()
     }
+    
+    func update(_ user: User, newPassword: String) {
+        user.password = newPassword
+        saveContext()
+    }
 }

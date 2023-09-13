@@ -188,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-nF-bkr">
-                                <rect key="frame" x="97.000000000000014" y="320.33333333333331" width="199.33333333333337" height="116.66666666666669"/>
+                                <rect key="frame" x="97.000000000000014" y="585.33333333333337" width="199.33333333333337" height="116.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-jd-T2V">
                                         <rect key="frame" x="0.0" y="0.0" width="199.33333333333334" height="46.333333333333336"/>
@@ -203,7 +203,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K15-wJ-UBG">
-                                        <rect key="frame" x="0.0" y="70.333333333333371" width="199.33333333333334" height="46.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="70.333333333333258" width="199.33333333333334" height="46.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
@@ -227,7 +227,7 @@
                             <constraint firstItem="tCo-x5-hsq" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="KPA-nh-Wi1"/>
                             <constraint firstItem="SnB-nF-bkr" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="NN6-By-exk"/>
                             <constraint firstItem="tCo-x5-hsq" firstAttribute="top" secondItem="V9r-zZ-UpJ" secondAttribute="top" constant="150" id="Sk8-tX-35x"/>
-                            <constraint firstItem="SnB-nF-bkr" firstAttribute="top" secondItem="tCo-x5-hsq" secondAttribute="bottom" constant="150" id="Sse-bE-h1W"/>
+                            <constraint firstItem="V9r-zZ-UpJ" firstAttribute="bottom" secondItem="SnB-nF-bkr" secondAttribute="bottom" constant="150" id="jfD-yY-STz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Sy-ph-Ev5"/>
