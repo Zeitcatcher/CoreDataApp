@@ -23,11 +23,28 @@ class DetailsViewController: UIViewController {
         print("Account was deleted")
         dismiss(animated: true)
     }
+    @IBAction func changeButtonPressed() {
+        showAlert(user: user)
+    }
 }
 
 // MARK: - Private Methods
 extension DetailsViewController {
     private func deleteAccount(_ user: User) {
         StorageManager.shared.delete(user)
+    }
+    
+    private func showAlert(user: User, completion: (() -> Void)? = nil) {
+        let title = "Update password"
+        print("Test Alert 1")
+        
+        let alert = UIAlertController.createAlertController(withTitle: title)
+        alert.action(user: user) { newPassword in
+            if let completion = completion {
+                StorageManager.shared.update(user, newPassword: newPassword)
+                completion()
+            }
+        }
+        present(alert, animated: true)
     }
 }

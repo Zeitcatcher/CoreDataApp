@@ -188,10 +188,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-nF-bkr">
-                                <rect key="frame" x="97.000000000000014" y="585.33333333333337" width="199.33333333333337" height="116.66666666666663"/>
+                                <rect key="frame" x="79.333333333333329" y="515" width="234.33333333333337" height="187"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPz-rV-0cM">
+                                        <rect key="frame" x="0.0" y="0.0" width="234.33333333333334" height="46.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Change password">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="27"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="changeButtonPressed" destination="nI2-Ju-UNK" eventType="touchUpInside" id="8dC-FD-Mdg"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-jd-T2V">
-                                        <rect key="frame" x="0.0" y="0.0" width="199.33333333333334" height="46.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="70.333333333333371" width="234.33333333333334" height="46.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
@@ -203,7 +215,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K15-wJ-UBG">
-                                        <rect key="frame" x="0.0" y="70.333333333333258" width="199.33333333333334" height="46.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="140.66666666666663" width="234.33333333333334" height="46.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
@@ -218,6 +230,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="JeV-jd-T2V" firstAttribute="width" secondItem="K15-wJ-UBG" secondAttribute="width" id="qmE-lb-n8f"/>
+                                    <constraint firstItem="CPz-rV-0cM" firstAttribute="width" secondItem="JeV-jd-T2V" secondAttribute="width" id="qz2-T2-iab"/>
                                 </constraints>
                             </stackView>
                         </subviews>
