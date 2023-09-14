@@ -25,6 +25,8 @@ class DetailsViewController: UIViewController {
     }
     @IBAction func changeButtonPressed() {
         showAlert(user: user)
+//        let newPass = "123"
+//        StorageManager.shared.update(user, newPassword: newPass)
     }
 }
 
@@ -34,16 +36,16 @@ extension DetailsViewController {
         StorageManager.shared.delete(user)
     }
     
-    private func showAlert(user: User, completion: (() -> Void)? = nil) {
+    private func showAlert(user: User) {
         let title = "Update password"
         print("Test Alert 1")
         
         let alert = UIAlertController.createAlertController(withTitle: title)
         alert.action(user: user) { newPassword in
-            if let completion = completion {
+//            if let completion = completion {
                 StorageManager.shared.update(user, newPassword: newPassword)
-                completion()
-            }
+//                completion()
+//            }
         }
         present(alert, animated: true)
     }

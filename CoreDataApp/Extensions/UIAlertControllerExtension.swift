@@ -17,6 +17,7 @@ extension UIAlertController {
             guard let newValue = self?.textFields?.first?.text else { return }
             guard !newValue.isEmpty else { return }
             complition(newValue)
+            print("Test alert 2")
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
