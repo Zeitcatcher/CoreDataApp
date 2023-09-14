@@ -25,9 +25,7 @@ extension UIAlertController {
         addAction(saveAction)
         addAction(cancelAction)
         addTextField { textField in
-            textField.placeholder = "User"
-            textField.text = user.password
-            
+            textField.placeholder = "New password"            
         }
     }
 }

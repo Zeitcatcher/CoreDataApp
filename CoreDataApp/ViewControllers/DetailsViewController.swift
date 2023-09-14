@@ -12,6 +12,16 @@ class DetailsViewController: UIViewController {
     var user: User!
 
     @IBOutlet weak var infoTextLabel: UILabel!
+    @IBOutlet weak var infoTextView: UITextView! {
+        didSet {
+            infoTextView.text =
+                """
+                Name: \(user.userProfile?. ?? "")
+                Last Name:
+                45
+                """
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +35,6 @@ class DetailsViewController: UIViewController {
     }
     @IBAction func changeButtonPressed() {
         showAlert(user: user)
-//        let newPass = "123"
-//        StorageManager.shared.update(user, newPassword: newPass)
     }
 }
 
@@ -42,10 +50,7 @@ extension DetailsViewController {
         
         let alert = UIAlertController.createAlertController(withTitle: title)
         alert.action(user: user) { newPassword in
-//            if let completion = completion {
-                StorageManager.shared.update(user, newPassword: newPassword)
-//                completion()
-//            }
+            StorageManager.shared.update(user, newPassword: newPassword)
         }
         present(alert, animated: true)
     }

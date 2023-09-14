@@ -233,19 +233,34 @@
                                     <constraint firstItem="CPz-rV-0cM" firstAttribute="width" secondItem="JeV-jd-T2V" secondAttribute="width" id="qz2-T2-iab"/>
                                 </constraints>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yi6-4K-Bob">
+                                <rect key="frame" x="79" y="190.33333333333334" width="235" height="128.00000000000003"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="xIN-HP-DJK"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V9r-zZ-UpJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Yi6-4K-Bob" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="7ki-GJ-0ZG"/>
                             <constraint firstItem="tCo-x5-hsq" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="KPA-nh-Wi1"/>
                             <constraint firstItem="SnB-nF-bkr" firstAttribute="centerX" secondItem="5v1-H4-QnR" secondAttribute="centerX" id="NN6-By-exk"/>
                             <constraint firstItem="tCo-x5-hsq" firstAttribute="top" secondItem="V9r-zZ-UpJ" secondAttribute="top" constant="150" id="Sk8-tX-35x"/>
+                            <constraint firstItem="Yi6-4K-Bob" firstAttribute="leading" secondItem="V9r-zZ-UpJ" secondAttribute="leading" constant="79" id="Svy-0I-KNb"/>
+                            <constraint firstItem="Yi6-4K-Bob" firstAttribute="top" secondItem="tCo-x5-hsq" secondAttribute="bottom" constant="20" id="dlN-Iz-wUL"/>
                             <constraint firstItem="V9r-zZ-UpJ" firstAttribute="bottom" secondItem="SnB-nF-bkr" secondAttribute="bottom" constant="150" id="jfD-yY-STz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8Sy-ph-Ev5"/>
                     <connections>
                         <outlet property="infoTextLabel" destination="tCo-x5-hsq" id="ATV-7t-0Fn"/>
+                        <outlet property="infoTextView" destination="Yi6-4K-Bob" id="CVg-Up-8Sj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ioS-yo-rGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -273,6 +288,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
